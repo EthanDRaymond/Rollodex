@@ -16,6 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.psu.hack.rollodex.R;
+import com.psu.hack.rollodex.card.UserCard;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Arrays;
 
@@ -71,13 +75,11 @@ public class RecieveActivity extends AppCompatActivity {
 
     @Override
     public void onNewIntent(Intent intent) {
-        /*
         String action = intent.getAction();
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
         String s = action + "\n\n" + tag.toString();
 
-        // parse through all NDEF messages and their records and pick text type only
         Parcelable[] data = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
         if (data != null) {
@@ -89,6 +91,17 @@ public class RecieveActivity extends AppCompatActivity {
                                 Arrays.equals(recs[j].getType(), NdefRecord.RTD_TEXT)) {
 
                             byte[] payload = recs[j].getPayload();
+                            try {
+                                JSONObject jsonObject = new JSONObject(new String(payload));
+                                new UserCard(
+                                        jsonObject.getString(ViewCardActivity.name),
+                                        jsonObject.getString(ViewCardActivity.phone),
+                                        jsonObject.getString(ViewCardActivity.email)
+                                );
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                break;
+                            }
                             String textEncoding;
                             if ((payload[0] & 0200) == 0) {
                                 textEncoding = "UTF-8";
@@ -111,7 +124,7 @@ public class RecieveActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
-        */
+
 
         Log.d("Nfc", "New Intent");
 
