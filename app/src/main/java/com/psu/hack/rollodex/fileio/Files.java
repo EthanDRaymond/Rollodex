@@ -1,4 +1,4 @@
-package com.psu.hack.rollodex.ui.fileio;
+package com.psu.hack.rollodex.fileio;
 
 /**
  * Created by ethanraymond on 11/7/15.

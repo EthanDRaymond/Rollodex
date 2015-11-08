@@ -1,4 +1,4 @@
-package com.psu.hack.rollodex.ui.card;
+package com.psu.hack.rollodex.card;
 
 import org.json.JSONException;
 import org.json.JSONObject;
