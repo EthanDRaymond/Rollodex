@@ -11,8 +11,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import com.psu.hack.rollodex.fileio.FileOperator;
 
 import com.psu.hack.rollodex.R;
+import com.psu.hack.rollodex.fileio.FileOperator;
+import com.psu.hack.rollodex.fileio.Files;
+
+import java.io.IOException;
 
 public class SplashActivity extends Activity {
 
@@ -23,14 +28,32 @@ public class SplashActivity extends Activity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
+
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                startActivity(new Intent(getBaseContext(), MainPageActivity.class));
+                if(!isUserNew()) {
+                    startActivity(new Intent(getBaseContext(), MainPageActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getBaseContext(), UserContactActivity.class));
+                }
             }
         });
     }
+    public boolean  isUserNew()
+    {
 
+        try {
+            String s = FileOperator.readFromFile(this, Files.USER_CARD);
+            if(s.equals(""))
+                return true;
+            else
+                return false;
+        } catch (IOException e) {
+            return true;
+        }
+    }
 }
