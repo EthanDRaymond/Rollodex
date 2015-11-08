@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Rollodex</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main_page">MainPageActivity</string>
     <string name="title_activity_view_card">ViewCardActivity</string>
     <string name="title_activity_user_contact">UserContact</string>
     <string name="inFirstName">First Name</string>

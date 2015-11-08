@@ -7,4 +7,5 @@
     <color name="color_splash_bg_start">#1b5eb7</color>
     <color name="color_splash_bg_end">#124c99</color>
     <color name="color_splash_progressbar">#bcbcbc</color>
+    <color name="color_spacer">#888888</color>
 </resources>

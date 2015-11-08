@@ -25,6 +25,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.MainPageActivity"
+            android:label="@string/title_activity_main_page" />
+        <activity
             android:name=".ui.ViewCardActivity"
             android:label="@string/title_activity_view_card" >
         </activity>
