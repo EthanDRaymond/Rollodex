@@ -11,9 +11,9 @@ public class ViewCardActivity extends Activity {
     private TextView n;
     private TextView e;
     private TextView p;
-    public static String name;
-    public static String email;
-    public static String phone;
+    public static String name = "name";
+    public static String email = "email";
+    public static String phone = "phone";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

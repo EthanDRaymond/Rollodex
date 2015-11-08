@@ -2,8 +2,11 @@ package com.psu.hack.rollodex.ui;
 
 import android.os.Bundle;
 import android.app.Activity;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
+=======
+>>>>>>> 249655c5a91a6287e8686140e20e1542a84c3995
 import android.widget.EditText;
 
 import com.psu.hack.rollodex.R;
@@ -17,16 +20,23 @@ public class UserContact extends Activity {
     private EditText EMail;
     private EditText PHone;
     private UserCard c;
+<<<<<<< HEAD
     private Button exit;
+=======
+>>>>>>> 249655c5a91a6287e8686140e20e1542a84c3995
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_contact);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 249655c5a91a6287e8686140e20e1542a84c3995
         FName = (EditText) findViewById(R.id.fName);
         LName = (EditText) findViewById(R.id.lName);
         PHone = (EditText) findViewById(R.id.iphone);
         EMail = (EditText) findViewById(R.id.iemail);
+<<<<<<< HEAD
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,3 +69,9 @@ public class UserContact extends Activity {
     }
 
 }
+=======
+        c = new UserCard(FName.getText().toString() + LName.getText().toString(), PHone.getText().toString(), EMail.getText().toString());
+    }
+
+}
+>>>>>>> 249655c5a91a6287e8686140e20e1542a84c3995
