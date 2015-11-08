@@ -4,9 +4,11 @@ import android.content.Context;
 
 import com.psu.hack.rollodex.fileio.FileOperator;
 import com.psu.hack.rollodex.fileio.Files;
+import com.psu.hack.rollodex.ui.ViewCardActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import java.util.ArrayList;
  */
 public class ContactList {
 
-    private static ArrayList<Card> contacts;
+    private static ArrayList<Card> contacts = null;
 
     public static ArrayList<Card> getContacts(Context context) {
         if (contacts == null) {
@@ -67,7 +69,12 @@ public class ContactList {
     }
 
     public static void readContactsFromFile(Context context) throws IOException {
-        FileOperator.readFromFile(context, Files.ADDRESS_BOOK);
+        contacts = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            Card card = new Card("Ethan Raymond", "555-555-5555", "email@website.com");
+            contacts.add(card);
+        }
+        //FileOperator.readFromFile(context, Files.ADDRESS_BOOK);
     }
 
     public static JSONArray makeJSON() throws JSONException {

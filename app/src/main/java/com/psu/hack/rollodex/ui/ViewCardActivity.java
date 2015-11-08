@@ -14,8 +14,9 @@ public class ViewCardActivity extends Activity {
     public static String name = "name";
     public static String email = "email";
     public static String phone = "phone";
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_card);
         Bundle b = getIntent().getExtras();
