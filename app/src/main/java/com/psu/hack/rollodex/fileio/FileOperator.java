@@ -38,27 +38,16 @@ public class FileOperator {
         fileOutputStream.close();
     }
 
-    /**
-     * This reads the given data from a file.
-     * @param context   used to find where the file is stored
-     * @param filename  the name of the file
-     * @param data      the data to read from the file
-     * @throws IOException      thrown when there is a problem reading from the file
-     * @return      the read data
-     */
-    public static String readFromFile(Context context, String filename, String data) {
-        return readFromFile(context, filename, data);
-    }
+
 
     /**
      * This reads the given data from a file.
      * @param context   used to find where the file is stored
      * @param filename  the name of the file
-     * @param data      the data to read from the file
      * @throws IOException      thrown when there is a problem reading from the file
      * @return      the read data
      */
-    public static String readFromFile(Context context, String filename, byte[] data) throws IOException {
+    public static String readFromFile(Context context, String filename) throws IOException {
         File file = new File(context.getFilesDir(), filename);
         FileInputStream fileInputStream = new FileInputStream(file);
         byte[] buffer = null;
