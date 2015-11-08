@@ -14,6 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.psu.hack.rollodex.R;
+import com.psu.hack.rollodex.card.UserCard;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.nio.charset.Charset;
 import java.util.Locale;
@@ -34,7 +38,16 @@ public class ShareActivity extends AppCompatActivity {
 
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
-        mNdefMessage = new NdefMessage(createTextRecord("This is a test message!!", Locale.ENGLISH, true));
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put(ViewCardActivity.name, UserCard.name);
+            jsonObject.put(ViewCardActivity.phone, UserCard.phoneNumber);
+            jsonObject.put(ViewCardActivity.email, UserCard.emailAddress);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        mNdefMessage = new NdefMessage(createTextRecord(jsonObject.toString(), Locale.ENGLISH, true));
 
         mNfcAdapter.setNdefPushMessage(mNdefMessage, this);
 

@@ -5,7 +5,7 @@ package com.psu.hack.rollodex.card;
  */
 public class UserCard extends Card {
 
-    private static String name, phoneNumber, emailAddress;
+    public static String name, phoneNumber, emailAddress;
 
     public UserCard(String name, String phoneNumber, String emailAddress) {
         super( name,  phoneNumber,  emailAddress);
