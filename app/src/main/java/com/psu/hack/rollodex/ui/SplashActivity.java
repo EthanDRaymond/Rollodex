@@ -31,7 +31,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        runOnUiThread(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
@@ -51,7 +51,7 @@ public class SplashActivity extends Activity {
                 }
                 finish();
             }
-        });
+        }, 3000);
     }
 
     public boolean  isUserNew()
