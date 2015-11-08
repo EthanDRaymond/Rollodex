@@ -25,13 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".ui.MainPageActivity"
-            android:label="@string/title_activity_main_page" >
-=======
+            android:label="@string/title_activity_main_page" />
+        <activity
             android:name=".ui.ViewCardActivity"
             android:label="@string/title_activity_view_card" >
->>>>>>> 84fa6c452537f955cb44fa743b021fa53215271b
         </activity>
     </application>
 

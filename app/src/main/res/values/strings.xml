@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">Rollodex</string>
     <string name="action_settings">Settings</string>
-<<<<<<< HEAD
     <string name="title_activity_main_page">MainPageActivity</string>
-=======
     <string name="title_activity_view_card">ViewCardActivity</string>
->>>>>>> 84fa6c452537f955cb44fa743b021fa53215271b
 </resources>
