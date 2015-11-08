@@ -8,5 +8,6 @@
     <string name="inLastName">Last Name</string>
     <string name="inPhone">Phone Number:</string>
     <string name="inEmail">E-mail:</string>
+    <string name="saveExit">Save</string>
 
 </resources>
