@@ -70,10 +70,19 @@ public class ContactList {
 
     public static void readContactsFromFile(Context context) throws IOException {
         contacts = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        Card c = new Card("Erie Insurance", "814-870-2000", "www.erieinsurance.com");
+        contacts.add(c);
+        c = new Card("Lawrence C. Ragan", "814-863-3144", "lcr1@coil.psu.edu");
+        contacts.add(c);
+        c = new Card("Brad Zdenek", "814-380-9319", "baz122@coil.psu.edu");
+        contacts.add(c);
+        c = new Card("Paul Girgis", "630-936-6847", "pgirgis@psu.edu");
+
+/*        for (int i = 0; i < 5; i++) {
             Card card = new Card("Ethan Raymond", "555-555-5555", "email@website.com");
             contacts.add(card);
         }
+*/
         //FileOperator.readFromFile(context, Files.ADDRESS_BOOK);
     }
 
