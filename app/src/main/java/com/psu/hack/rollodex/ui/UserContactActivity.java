@@ -63,7 +63,7 @@ public class UserContactActivity extends Activity {
                 else
                     p = "";
                 
-                c = new UserCard( f + l, p, e);
+                c = new UserCard( f +" " + l, p, e);
                 try {
                     FileOperator.writeToFile(
                             getBaseContext(),
