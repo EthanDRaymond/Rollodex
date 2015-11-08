@@ -1,5 +1,6 @@
 package com.psu.hack.rollodex.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -73,6 +74,7 @@ public class UserContactActivity extends Activity {
                 } catch (JSONException e1) {
                     e1.printStackTrace();
                 }
+                startActivity(new Intent(getBaseContext(), UserContactActivity.class));
                 finish();
             }
         });

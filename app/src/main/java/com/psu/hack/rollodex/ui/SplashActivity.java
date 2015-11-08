@@ -35,7 +35,7 @@ public class SplashActivity extends Activity {
                     e.printStackTrace();
                 }
  */
-                if(!isUserNew()) {
+                if(isUserNew()) {
                     startActivity(new Intent(getBaseContext(), MainPageActivity.class));
                 }
                 else {
