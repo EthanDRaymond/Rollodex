@@ -15,14 +15,19 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
-
+/**
+ * This page is used when the user opens the app for the first time and has to enter information
+ * for their own card.
+ */
 public class UserContactActivity extends Activity {
-    private EditText FName;
-    private EditText LName;
-    private EditText EMail;
-    private EditText PHone;
+
+    private EditText FName;     // The user's first name
+    private EditText LName;     // The user's last name
+    private EditText EMail;     // the user's email address
+    private EditText PHone;     // the user's phone number
     private UserCard c;
     private Button exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
