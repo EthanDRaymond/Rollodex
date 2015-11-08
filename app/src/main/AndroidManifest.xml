@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".ui.MainPageActivity"
-            android:label="@string/title_activity_main_page" />
+            android:label="Rollodex" />
         <activity
             android:name=".ui.ViewCardActivity"
             android:label="@string/title_activity_view_card" >
@@ -37,15 +37,16 @@
         </activity>
         <activity
             android:name=".ui.SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:label="Settings"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity android:name=".ui.ShareActivity" >
         </activity>
         <activity android:name=".ui.AboutActivity" >
         </activity>
-        <activity android:name=".ui.MyBusinessCardActivity" >
-        </activity>
+        <activity
+            android:name=".ui.MyBusinessCardActivity"
+            android:label= "My Business Card" />
         <activity android:name=".ui.RecieveActivity" >
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>

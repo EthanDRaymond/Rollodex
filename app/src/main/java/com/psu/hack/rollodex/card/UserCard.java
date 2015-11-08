@@ -13,4 +13,18 @@ public class UserCard extends Card {
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
     }
+    public static String getN()
+    {
+        return name;
+    }
+    public static String getP()
+    {
+        return phoneNumber;
+    }
+    public static String getE()
+    {
+        return emailAddress;
+    }
+
+
 }

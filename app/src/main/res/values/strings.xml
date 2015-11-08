@@ -24,5 +24,6 @@
         <item>Sort By Date Added</item>
     </string-array>
     <string name="title_activity_my_business_card">MyBusinessCard</string>
+    <string name="inFullName">Name:</string>
 
 </resources>
