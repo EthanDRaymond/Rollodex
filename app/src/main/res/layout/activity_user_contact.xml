@@ -7,7 +7,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.psu.hack.rollodex.ui.UserContact">
 
-<<<<<<< HEAD
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,8 +17,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="46dp">
+            android:layout_marginStart="37dp">
 
             <!-- First Name-->
             <LinearLayout
@@ -60,11 +58,11 @@
                     android:id="@+id/inLastName" />
 
                 <EditText
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/lName"
                     android:layout_weight="1"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:layout_width="0dp" />
             </LinearLayout>
             <!-- Phone Number-->
             <LinearLayout
@@ -83,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/iphone"
+                    android:inputType="phone"
                     android:layout_weight="1" />
             </LinearLayout>
             <!-- E-Mail -->
@@ -96,6 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/inEmail"
+                    android:inputType="textEmailAddress"
                     android:id="@+id/inEMail" />
 
                 <EditText
@@ -115,103 +115,4 @@
             android:id="@+id/exit"
             android:layout_gravity="center_horizontal|bottom" />
     </FrameLayout>
-=======
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="46dp">
-
-        <!-- First Name-->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/inFirstName"
-                android:id="@+id/inFirstName" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/fName"
-                android:layout_weight="0.78"
-                android:allowUndo="false"
-                android:clickable="false"
-                android:editable="true"
-                android:inputType="text"
-                android:linksClickable="false"
-                android:phoneNumber="false" />
-
-        </LinearLayout>
-        <!-- Last Name-->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout2" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/inLastName"
-                android:id="@+id/inLastName" />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/lName"
-                android:layout_weight="1"
-                android:inputType="text" />
-        </LinearLayout>
-        <!-- Phone Number-->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/inPhone"
-                android:id="@+id/inPhone" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/iphone"
-                android:layout_weight="1" />
-        </LinearLayout>
-        <!-- E-Mail -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/inEmail"
-                android:id="@+id/inEMail" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/iemail"
-                android:layout_weight="1"
-                android:inputType="phone" />
-        </LinearLayout>
-
-    </LinearLayout>
->>>>>>> 249655c5a91a6287e8686140e20e1542a84c3995
 </RelativeLayout>
