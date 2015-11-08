@@ -1,4 +1,4 @@
-package com.psu.hack.rollodex.ui.fileio;
+package com.psu.hack.rollodex.fileio;
 
 import android.content.Context;
 
