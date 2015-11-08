@@ -130,7 +130,7 @@ public class MainPageActivity extends AppCompatActivity
 
         if (id == R.id.nav_gallery) {
 
-
+            startActivity(new Intent(getBaseContext(), MyBusinessCardActivity.class));
         } else if (id == R.id.nav_manage) {
 
             startActivity(new Intent(getBaseContext(),SettingsActivity.class));
