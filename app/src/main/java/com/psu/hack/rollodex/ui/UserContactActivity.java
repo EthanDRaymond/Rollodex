@@ -31,6 +31,7 @@ public class UserContactActivity extends Activity {
         LName = (EditText) findViewById(R.id.lName);
         PHone = (EditText) findViewById(R.id.iphone);
         EMail = (EditText) findViewById(R.id.iemail);
+        exit = (Button) findViewById(R.id.exit);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

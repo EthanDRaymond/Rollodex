@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/iemail"
                     android:layout_weight="1"
-                    android:inputType="phone" />
+                    android:inputType="textEmailAddress" />
             </LinearLayout>
 
         </LinearLayout>
