@@ -47,7 +47,9 @@ public class ShareActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        mNdefMessage = new NdefMessage(createTextRecord(jsonObject.toString(), Locale.ENGLISH, true));
+        mNdefMessage = new NdefMessage(
+                createTextRecord(jsonObject.toString(), Locale.ENGLISH, true) ,
+                NdefRecord.createApplicationRecord("application/com.psu.hack.rollodex.ui.RecieveActivity"));
 
         mNfcAdapter.setNdefPushMessage(mNdefMessage, this);
 

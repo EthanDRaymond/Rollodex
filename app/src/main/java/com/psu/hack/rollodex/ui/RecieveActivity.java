@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.psu.hack.rollodex.R;
+import com.psu.hack.rollodex.card.Card;
+import com.psu.hack.rollodex.card.ContactList;
 import com.psu.hack.rollodex.card.UserCard;
 
 import org.json.JSONException;
@@ -93,14 +95,16 @@ public class RecieveActivity extends AppCompatActivity {
                             byte[] payload = recs[j].getPayload();
                             try {
                                 JSONObject jsonObject = new JSONObject(new String(payload));
-                                new UserCard(
+                                Card c = new Card(
                                         jsonObject.getString(ViewCardActivity.name),
                                         jsonObject.getString(ViewCardActivity.phone),
                                         jsonObject.getString(ViewCardActivity.email)
                                 );
+                                ContactList.appendToContacts(this, c);
+                                finish();
+                                break;
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                break;
                             }
                             String textEncoding;
                             if ((payload[0] & 0200) == 0) {
@@ -126,7 +130,6 @@ public class RecieveActivity extends AppCompatActivity {
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
 
 
-        Log.d("Nfc", "New Intent");
 
         //getTag(intent);
 

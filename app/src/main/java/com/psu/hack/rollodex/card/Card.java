@@ -1,5 +1,7 @@
 package com.psu.hack.rollodex.card;
 
+import com.psu.hack.rollodex.ui.ViewCardActivity;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -67,9 +69,9 @@ public class Card {
      */
     public JSONObject toJSON() throws JSONException {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put(JSON_KEY_NAME, this.name);
-        jsonObject.put(JSON_KEY_PHONE_NUMBER, this.phoneNumber);
-        jsonObject.put(JSON_KEY_EMAIL_ADDRESS, this.emailAddress);
+        jsonObject.put(ViewCardActivity.name, this.name);
+        jsonObject.put(ViewCardActivity.phone, this.phoneNumber);
+        jsonObject.put(ViewCardActivity.email, this.emailAddress);
         return jsonObject;
     }
 
