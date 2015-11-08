@@ -56,7 +56,7 @@ public class MainPageActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(), ShareActivity.class));
+                startActivity(new Intent(getBaseContext(), RecieveActivity.class));
             }
         });
 
