@@ -74,7 +74,7 @@ public class UserContactActivity extends Activity {
                 } catch (JSONException e1) {
                     e1.printStackTrace();
                 }
-                startActivity(new Intent(getBaseContext(), UserContactActivity.class));
+                startActivity(new Intent(getBaseContext(), MainPageActivity.class));
                 finish();
             }
         });
