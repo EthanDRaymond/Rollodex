@@ -28,6 +28,10 @@
             android:name=".ui.ViewCardActivity"
             android:label="@string/title_activity_view_card" >
         </activity>
+        <activity
+            android:name=".ui.UserContact"
+            android:label="@string/title_activity_user_contact" >
+        </activity>
     </application>
 
 </manifest>
