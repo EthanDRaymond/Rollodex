@@ -8,6 +8,12 @@ import android.widget.EditText;
 
 import com.psu.hack.rollodex.R;
 import com.psu.hack.rollodex.card.UserCard;
+import com.psu.hack.rollodex.fileio.FileOperator;
+import com.psu.hack.rollodex.fileio.Files;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 
 
 public class UserContactActivity extends Activity {
@@ -51,6 +57,16 @@ public class UserContactActivity extends Activity {
                     p = "";
                 
                 c = new UserCard( f + l, p, e);
+                try {
+                    FileOperator.writeToFile(
+                            getBaseContext(),
+                            Files.USER_CARD,
+                            c.toJSON().toString());
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
+                }
                 finish();
             }
         });
