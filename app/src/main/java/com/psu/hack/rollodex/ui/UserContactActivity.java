@@ -10,7 +10,7 @@ import com.psu.hack.rollodex.R;
 import com.psu.hack.rollodex.card.UserCard;
 
 
-public class UserContact extends Activity {
+public class UserContactActivity extends Activity {
     private EditText FName;
     private EditText LName;
     private EditText EMail;
