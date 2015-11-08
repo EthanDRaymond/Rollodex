@@ -50,7 +50,7 @@ public class FileOperator {
     public static String readFromFile(Context context, String filename) throws IOException {
         File file = new File(context.getFilesDir(), filename);
         FileInputStream fileInputStream = new FileInputStream(file);
-        byte[] buffer = null;
+        byte[] buffer = new byte[(int) file.length()];
         fileInputStream.read(buffer);
         fileInputStream.close();
         return new String(buffer);
