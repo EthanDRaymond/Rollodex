@@ -9,5 +9,20 @@
     <string name="inPhone">Phone Number:</string>
     <string name="inEmail">E-mail:</string>
     <string name="saveExit">Save</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_settings_menu">SettingsMenu</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_share_">Share_Activity</string>
+    <string name="TextView1">Select Sorting Method</string>
+    <string-array name="Options">
+        <item>Sort By First Name</item>
+        <item>Sort By Last Name</item>
+        <item>Sort By Date Added</item>
+    </string-array>
+    <string name="title_activity_my_business_card">MyBusinessCard</string>
 
 </resources>
